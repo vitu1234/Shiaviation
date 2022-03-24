@@ -12,6 +12,10 @@ $sql_fetch_three_services= " SELECT * FROM tbl_services where service_type_id = 
 $sql_fetch_three_services_run = mysqli_query($conn, $sql_fetch_three_services);
 $sql_fetch_three_services_rows = mysqli_num_rows($sql_fetch_three_services_run);
 
+$sql_fetch_four_services= " SELECT * FROM tbl_services where service_type_id = 4";
+$sql_fetch_four_services_run = mysqli_query($conn, $sql_fetch_four_services);
+$sql_fetch_four_services_rows = mysqli_num_rows($sql_fetch_four_services_run);
+
 
 $sql_fetch_all_services= " SELECT * FROM tbl_services where isAvailable = 'yes'";
 $sql_fetch_all_services_run = mysqli_query($conn, $sql_fetch_all_services);
@@ -88,7 +92,7 @@ if (isset($_POST['order_service'])) {
 
               <div class="s-12 m-6 l-6 margin-bottom-60">
                 <div class="float-left">
-                  <i class="icon-plane text-primary text-size-40 text-line-height-1"></i>
+                  <i class="icon-sli-plane text-primary text-size-40 text-line-height-1"></i>
                 </div>
                 <div class="margin-left-60">
                   <h3 class="text-strong text-size-20 text-line-height-1 margin-bottom-20">TRAVEL SERVICES</h3>
@@ -114,6 +118,22 @@ if (isset($_POST['order_service'])) {
                   <?php while ($sql_fetch_three_services_data = mysqli_fetch_assoc($sql_fetch_three_services_run)) {?>
                       <li>
                       <?php echo $sql_fetch_three_services_data['title']; ?>
+                      </li>
+                  <?php }?>
+                  </ul>                  
+                </div>
+              </div>
+
+              <div class="s-12 m-12 l-12 margin-bottom-60">
+                <div class="float-left">
+                  <i class="icon-sli-user text-primary text-size-40 text-line-height-1"></i>
+                </div>
+                <div class="margin-left-60">
+                  <h3 class="text-strong text-size-20 text-line-height-1 margin-bottom-20">AVIATION TRAINING</h3>
+                  <ul> 
+                  <?php while ($sql_fetch_four_services_data = mysqli_fetch_assoc($sql_fetch_four_services_run)) {?>
+                      <li>
+                      <?php echo $sql_fetch_four_services_data['title']; ?>
                       </li>
                   <?php }?>
                   </ul>                  

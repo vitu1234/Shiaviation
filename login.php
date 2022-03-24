@@ -2,6 +2,8 @@
 
 $_SESSION['notification']="";
 
+
+
 //registering a new customer/member
 if (isset($_POST['login'])) {
 	# get the data into variables
@@ -20,13 +22,25 @@ if (isset($_POST['login'])) {
         $isAdmin = $sql_fetch_member_data['isAdmin'];
         $name = $sql_fetch_member_data['name'];
         $user_id = $sql_fetch_member_data['id'];
+        $profile_image = $sql_fetch_member_data['profile_image'];
+        $phone_number = $sql_fetch_member_data['mobile_number'];
+        $address = $sql_fetch_member_data['address'];
 		if ($password == $db_password) {
 				 # if login is successfull
 				 	$_SESSION['user_email']=$email;
 				 	$_SESSION['isAdmin']=$isAdmin;
 				 	$_SESSION['name']=$name;
-				 	$_SESSION['user_id']=$user_id;
-					header('location:index.php');
+           $_SESSION['user_id']=$user_id;
+           $_SESSION['profile_image']=$profile_image;
+           $_SESSION['phone_number']=$phone_number;
+           $_SESSION['address']=$address;
+           if($isAdmin == 'yes'){
+            header('location:adminDash.php');
+
+           }else{
+            header('location:userDash.php');
+
+           }
 					exit();
 			
 		}else {
@@ -82,6 +96,10 @@ if (isset($_POST['login'])) {
               </div>    
             </form>
             <h3 class="text-center">Do not have an account? <a href="register.php">Click here to register</a></h3 >
+            <hr>
+            <h3 class="text-center">Forgot Password? <a href="resetPassword.php" class="button border-radius text-white background-info">Reset Password</a></h3 >
+
+
 </div>                                                                                                                                                                                        
           </div>
         </section> 

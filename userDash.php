@@ -1,5 +1,15 @@
 <?php include 'includes/header.php'; 
-$sql_fetch_user_orders= " SELECT * FROM sh_aviation.orders";
+// $sql_fetch_user_orders= " SELECT * FROM sh_aviation.orders";
+$sql_fetch_user_orders= "SELECT 
+`user`.`name` AS `name`,
+`user`.`email` AS `email`,
+`user_service`.`created_at` AS `created_at`,
+`user_service`.`additional_info` AS `additional_info`,
+`service`.`title` AS `title`
+FROM
+((`sh_aviation`.`tbl_user_service` `user_service`
+JOIN `sh_aviation`.`tbl_users` `user` ON ((`user_service`.`user_id` = `user`.`id`)))
+JOIN `sh_aviation`.`tbl_services` `service` ON ((`user_service`.`service_id` = `service`.`id`)))";
 $sql_fetch_user_orders_run = mysqli_query($conn, $sql_fetch_user_orders);
 $sql_fetch_user_orders_rows = mysqli_num_rows($sql_fetch_user_orders_run);
 
@@ -18,7 +28,9 @@ if(isset($_SESSION['user_email'])){
       <article>    
         <!-- Header -->
         <header class="section background-image text-center" style="background-image:url(img/9.jpg)">
-          <h1 class="animated-element slow text-extra-thin text-white text-s-size-30 text-m-size-40 text-size-50 text-line-height-1 margin-bottom-30 margin-top-130">
+        <img src="img/users/<?php echo $profile_image?>" style="height:100px;width:100px;margin-left:auto;margin-right:auto;margin-top:50px;border-radius:100%;" class="text-center"/>
+
+          <h1 class="animated-element slow text-extra-thin text-white text-s-size-30 text-m-size-40 text-size-50 text-line-height-1 margin-bottom-10 margin-top-30">
             <?php echo $name; ?>
           </h1>
           
@@ -32,19 +44,9 @@ if(isset($_SESSION['user_email'])){
           <div class="line"> 
             <div class="margin">
               <!-- Sidebar -->
-              <div class="s-12 m-4 l-2">
-                <aside class="aside-left">                  
-                  <div class="aside-nav background-primary-hightlight">                    
-                    <ul class="chevron">                      
-                      <li><a href="#orders">Orders</a></li> 
-                      <li><a href="#profile">Profile</a></li> 
-                                                        
-                    </ul>                  
-                  </div>
-                </aside>  
-              </div>
+          
               <!-- Content -->
-              <div class="s-12 m-8 l-10">
+              <div class="s-12 m-12 l-12">
            
         
                   <div id="orders"></div>  
@@ -73,41 +75,6 @@ if(isset($_SESSION['user_email'])){
                     </table>
                     </div> 
 
-                  <hr class="break">
-                  <div id="profile"></div>  
-                  <section class="section background-white" >  
-          <div class="line background-white"> 
-          <div class="s-12 m-12 l-12 ">
-            <!-- <h3 class="text-size-30 margin-bottom-40 text-center"><b>Your profile</b></h3>
-            <form class="customform " method="post" enctype="multipart/form-data">
-              <div class="line">
-                <div class="margin">
-                <div class="s-12 m-12 l-12">
-                    <input name="name" class="required name"  placeholder="Your name" title="Your name" type="text" />
-                  </div>
-                  <div class="s-12 m-12 l-12">
-                    <input name="email" class="required email"  placeholder="Your e-mail" title="Your e-mail" type="text" />
-                  </div>
-                  <div class="s-12 m-12 l-12">
-                    <input name="password" class="required password" placeholder="Choose password" title="Your password" type="password" />
-                  </div>
-                </div>
-              </div>            
-                              
-              <div class="line">       
-               
-                <div class="s-12"><button class="button border-radius text-white background-primary" type="submit">Edit</button></div>
-              </div>    
-            </form> -->
-            <hr class="break">
-
-            <div class="line">       
-               
-               <div class="s-12"><a href="logout.php" class="button border-radius text-white background-red" >Logout</a></div>
-             </div> 
-</div>                                                                                                                                                                                        
-          </div>
-        </section> 
               </div> 
             </div>      
           </div>                                                                                                     

@@ -1,4 +1,5 @@
 <?php
+ob_start();
 $servername = "localhost";
 $server_user = "root";
 $server_password = "";
@@ -22,6 +23,9 @@ if(isset($_SESSION['user_email'])){
 	$name=$_SESSION['name'];
 	$user_id=$_SESSION['user_id'];
 	$isAdmin=$_SESSION['isAdmin'];
+	$profile_image=$_SESSION['profile_image'];
+	$address=$_SESSION['address'];
+	$phone_number=$_SESSION['phone_number'];
   $loggin_status = 'Logged in';
   $loggedin = true;
   }else{
@@ -116,12 +120,37 @@ if(isset($_SESSION['user_email'])){
                 <li><a href="contact.php">Contact</a></li>
                 <?php if($loggedin){?> 
                   <?php if($isAdmin == 'yes'){?>
-                <li><a href="adminDash.php">Profile</a></li>
+                <li style="margin-left:300px"><a>
+              
+          <i class="icon-user text-black text-size-20"></i>
+              
+              </a>
+            
+              <ul>
+                    <li><a href="adminDash.php">Ordered Services</a></li>
+                    <li><a href="adminDashUsers.php">Users</a></li>
+                    <li><a href="adminDashServices.php">Services</a></li>
+                    <li><a href="adminDashSettings.php">Settings</a></li>
+                    <hr>
+                    <li><a href="logout.php">Logout</a></li>
+                  </ul>
+                </li>
                 <?php }else{ ?>
-                <li><a href="userDash.php">Profile</a></li>
+                <li style="margin-left:300px"><a>
+                <i class="icon-user text-black text-size-20"></i>
+                </a>
+                <ul>
+                    <li><a href="userDash.php">Orders</a></li>
+                    <li><a href="userDashSettings.php">Settings</a></li>
+                    <hr>
+                    <li><a href="logout.php">Logout</a></li>
+                  </ul></li>
                 <?php }?>
                 <?php }else{ ?>
-                <li><a href="login.php">Login</a></li>
+                <li style="margin-left:300px"><a href="login.php"> 
+          <i class="icon-sli-login text-black text-size-20"></i>
+                
+                </a></li>
                 <?php }?>
              </ul> 
           </div>

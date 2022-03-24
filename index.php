@@ -258,7 +258,7 @@ $sql_fetch_all_services_rows = mysqli_num_rows($sql_fetch_all_services_run);
             </div>
               
             <div class="m-12 l-6">
-              <img src="img/7.jpg" alt="">
+              <img src="img/a8.jpg" alt="">
             </div>
           </div>    
         </div>
@@ -308,7 +308,7 @@ $sql_fetch_all_services_rows = mysqli_num_rows($sql_fetch_all_services_run);
                     <p>Self-motivated, innovative and forward thinking person.</p>
                   </div> 
                 </div>  
-                <img src="img/img-01.jpg"/>
+                <img src="img/hastings.png"/>
               </div>                                                                                                                                                                                                              
               <div class="margin-top">                                                                                                                                         
                 <h4 class="text-strong margin-bottom-10">Hastings Laison Jailosi</h4>                        
@@ -325,7 +325,7 @@ $sql_fetch_all_services_rows = mysqli_num_rows($sql_fetch_all_services_run);
                     <p>Her commitment as a Malawian Sales and Marketing plus Business Development professional has shaped her experiences in the profession.</p>
                   </div> 
                 </div>  
-                <img src="img/img-01.jpg"/>
+                <img src="img/selina.png"/>
               </div>                                                                                                                                                                                                              
               <div class="margin-top">                                                                                                                                         
                 <h4 class="text-strong margin-bottom-10">Sellina Mhango</h4>                        

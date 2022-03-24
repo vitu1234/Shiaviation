@@ -3,9 +3,16 @@ if (isset($_POST['register_user'])) {
 	$name=$_POST['name'];
 	$email=$_POST['email'];
 	$password=$_POST['password'];
+	$mobile_number=$_POST['mobile_number'];
+  $address=$_POST['physical_address'];
+	$image = $_FILES["image"]["name"];
+  
+
+  move_uploaded_file($_FILES["image"]["tmp_name"],"img/users/".$image);
 
 
-		 $sql_new_product = " INSERT INTO tbl_users (id , name , email , isAdmin , image,password) VALUES(NULL , '$name' , '$email' , 'no' ,null, '$password') ";
+
+		 $sql_new_product = "INSERT INTO tbl_users (id ,name,email,isAdmin,profile_image,mobile_number,address,password) VALUES(NULL,'$name','$email','no','$image','$mobile_number','$address','$password') ";
 		 $sql_new_product_run = mysqli_query($conn , $sql_new_product);
 
 		   if ($sql_new_product_run) {
@@ -21,12 +28,14 @@ if (isset($_POST['register_user'])) {
                 $isAdmin = $sql_fetch_member_data['isAdmin'];
                 $name = $sql_fetch_member_data['name'];
                 $user_id = $sql_fetch_member_data['id'];
+                $image = $sql_fetch_member_data['profile_image'];
                 if ($password == $db_password) {
                          # if login is successfull
                              $_SESSION['user_email']=$email;
                              $_SESSION['isAdmin']=$isAdmin;
                              $_SESSION['name']=$name;
                              $_SESSION['user_id']=$user_id;
+                             $_SESSION['profile_image']=$image;
                             header('location:index.php');
                             exit();
                     
@@ -49,7 +58,8 @@ if (isset($_POST['register_user'])) {
 			   $_SESSION['notification']="<div class=\"alert alert-danger\">
 							 Adding user has failed.
 							 <a href=\"#\" class=\"close\" data-dismiss=\"alert\" aria-label=\"close\">&times;</a>
-						   </div>";
+               </div>";
+               echo 'failed'. mysqli_error($conn);
            }
            
 
@@ -78,16 +88,22 @@ if (isset($_POST['register_user'])) {
             <form class="customform " method="post" enctype="multipart/form-data">
               <div class="line">
                 <div class="margin">
-                <div class="s-12 m-12 l-12">
+                <div class="s-12 m-6 l-6">
                     <input name="name" class="required name"  placeholder="Your name" title="Your name" type="text" />
                   </div>
-                  <div class="s-12 m-12 l-12">
+                  <div class="s-12 m-6 l-6">
                     <input name="email" class="required email"  placeholder="Your e-mail" title="Your e-mail" type="text" />
                   </div>
-                  <!-- <div class="s-12 m-12 l-12">
-                      <label for="image">Image</label>
-                    <input name="image" class=" email" type="file" />
-                  </div> -->
+                  <div class="s-12 m-6 l-6">
+                    <input name="mobile_number" class="required mobile_number"  placeholder="Your Phone number" title="Your Phone number" type="text" />
+                  </div>
+                  <div class="s-12 m-6 l-6">
+                    <input name="physical_address" class="required"  placeholder="Your physical address" title="Your address" type="text" />
+                  </div>
+                  <div class="s-12 m-12 l-12">
+                      <label for="image">Profile image</label>
+                    <input name="image"  type="file" />
+                  </div>
                   <div class="s-12 m-12 l-12">
                     <input name="password" class="required password" placeholder="Choose password" title="Your password" type="password" />
                   </div>

@@ -68,15 +68,15 @@
                 <h2 class="text-size-20 margin-bottom-10 margin-m-top-50 text-strong">Get in touch</h2>
                 <!-- If you want to make a field required, add the "required" class to the input. -->
                 <!-- The form e-mail address you can change on file resp-email.php on line 4. -->
-                <form name="contactForm" class="customform ajax-form" method="post" enctype="multipart/form-data">
+                <form name="contactForm" id="contactForm" class="customform " method="post" enctype="multipart/form-data">
                   <div class="line">
                     <div class="margin">
                       <div class="s-12 m-12 l-6">
-                        <input name="email" class="required email" placeholder="Your e-mail" title="Your e-mail" type="text" />
+                        <input name="email" class="required email" id="email" placeholder="Your e-mail" title="Your e-mail" type="text" />
                         <p class="email-error form-error">Please enter your e-mail.</p>
                       </div>
                       <div class="s-12 m-12 l-6">
-                        <input name="name" class="name" placeholder="Your name" title="Your name" type="text" />
+                        <input name="name" id="name" class="name" placeholder="Your name" title="Your name" type="text" />
                         <p class="name-error form-error">Please enter your name.</p>
                       </div>
                     </div>
@@ -84,27 +84,28 @@
                                   
                   <div class="line">       
                     <div class="s-12">
-                      <input name="subject" class="required subject" placeholder="Subject" title="Subject" type="text" />
+                      <input name="subject" id="subject" class="required subject" placeholder="Subject" title="Subject" type="text" />
                       <p class="subject-error form-error">Please enter your subject.</p>
                     </div>
                     <div class="s-12">
-                      <textarea name="message" class="required message" placeholder="Your message" rows="3"></textarea>
+                      <textarea name="message" id="message" class="required message" placeholder="Your message" rows="3"></textarea>
                       <p class="message-error form-error">Please enter your message.</p>
                     </div>
                  
                     <!-- full-name-field is hidden antirobot field -->
                     <input name="full-name-field" type="text" id="full-name-field" class="full-name-field" />
                     <div class="s-12">
-                      <a class="captcha-button text-white background-primary border-radius margin-bottom">
+                      <button type="submit" id="sendBtn" class="captcha-button text-white background-primary border-radius margin-bottom">
                         <span class="not-a-robot-icon"><i class="icon-check text-white"></i></span> 
                         <span class="not-a-robot-text">Send message</span>
-                      </a>
+                      </button>
                     </div> 
                     <!-- The submit button text you can edit in the file validation.sj on the line 8. -->
                     <div class="s-12 button-parent"></div>
                     <div class="line">
                       <p class="mail-success form-success">Your message has been sent successfully.</p>
-                      <p class="mail-fail form-error">Sorry, error occured this time sending your message.</p>
+                      <p class="mail-fail form-error">Sorry, error occurred this time sending your message.</p>
+                      <p class="mail-failV form-error">Fill all fields</p>
                     </div>
                   </div>    
                 </form>

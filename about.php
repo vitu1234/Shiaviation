@@ -23,7 +23,7 @@
           <div class="line">
             <div class="margin2x">
               <div class="m-12 l-6 margin-m-bottom-30">
-                <img src="img/7.jpg" alt="">
+                <img src="img/a3.jpg" alt="">
               </div>          
               <div class="m-12 l-6">
                 <h3 class="animated-element text-strong text-size-20 text-line-height-1 margin-bottom-20">About Us</h3>
@@ -50,18 +50,18 @@
                 <h3 class="animated-element text-strong text-size-20 text-line-height-1 margin-bottom-20">Our Mission</h3>
                 <ul>
 
-                <li class="animated-element slow ">To offer excellent and uncompromised services to our customers.</li><br>
-                <li class="animated-element slow ">To engage self-motivated, innovative and forward thinking professional personnel who appreciate their values to the company; those with abilities to work very well under pressure to meet the goals and respond positively to the changing environment in aviation industry by promoting safety.</li><br>
-                <li class="animated-element slow ">
+                <li class="animated-element slow text-size-20 ">To offer excellent and uncompromised services to our customers.</li><br>
+                <li class="animated-element slow text-size-20 ">To engage self-motivated, innovative and forward thinking professional personnel who appreciate their values to the company; those with abilities to work very well under pressure to meet the goals and respond positively to the changing environment in aviation industry by promoting safety.</li><br>
+                <li class="animated-element slow text-size-20">
                     To establish, develop, grow and maintain our customer base through long-term partnerships, and to support our customers' activities under one roof by providing an ever expanding service to them through continuous efforts to improve and widen our comprehensive network of suppliers.
                 </li><br>
                 </ul>
                 <h3 class="animated-element text-strong text-size-20 text-line-height-1 margin-bottom-20">Our Goals</h3>
                 <ul>
 
-                <li class="animated-element slow ">To achieve maximum growth of our customers and service providers.</li><br>
-                <li class="animated-element slow ">To grow SH Aviation network beyond Africa.</li><br>
-                <li class="animated-element slow ">
+                <li class="animated-element slow text-size-20">To achieve maximum growth of our customers and service providers.</li><br>
+                <li class="animated-element slow text-size-20">To grow SH Aviation network beyond Africa.</li><br>
+                <li class="animated-element slow text-size-20">
                 To serve our customers with honesty and integrity.
                 </li>
                 </ul>
@@ -69,7 +69,7 @@
              
               </div>
               <div class="m-12 l-6 margin-m-bottom-30">
-                <img src="img/8.jpg" alt="">
+                <img src="img/a6.jpg" alt="">
               </div>  
               
             </div>    
@@ -84,7 +84,7 @@
           <div class="margin">
             <div class="s-12 m-6 margin-bottom">
               <div class="hover-zoom">
-                <a href="sample-page.html" class="background-image section-block s-12" style="background-image:url(img/product-01.jpg)">
+                <a href="" class="background-image section-block s-12" style="background-image:url(img/product-01.jpg)">
                   <h3 class="text-strong text-white">Customer Service</h3> 
                   <p class="text-white">To make all applications and approval processes for our customers hustle free and to assist them in full utilization of services offered by SH Aviation.</p> 
                 </a>
@@ -92,7 +92,7 @@
             </div>
             <div class="s-12 m-6 margin-bottom">
               <div class="hover-zoom">
-                <a href="sample-page.html" class="background-image section-block s-12" style="background-image:url(img/product-02.jpg)">
+                <a href="" class="background-image section-block s-12" style="background-image:url(img/product-02.jpg)">
                   <h3 class="text-strong text-white">Service Provision</h3> 
                   <p class="text-white">We aim to provide all services required by the customer under one roof and to embody the motto of <em><i>Enjoy the heights as we take care of the ground works.</i></em>.</p> 
                 </a>
@@ -100,7 +100,7 @@
             </div>
             <div class="s-12 m-4 margin-bottom">
               <div class="hover-zoom">
-                <a href="sample-page.html" class="background-image section-block s-12" style="background-image:url(img/product-03.jpg)">
+                <a href="" class="background-image section-block s-12" style="background-image:url(img/product-03.jpg)">
                   <h3 class="text-strong text-white">Query Handling</h3> 
                   <p class="text-white">To handle all queries efficiently, swiftly and accurately in order to maintain a good working relationship with our customers.</p> 
                 </a>
@@ -108,7 +108,7 @@
             </div>
             <div class="s-12 m-4 margin-bottom">
               <div class="hover-zoom">
-                <a href="sample-page.html" class="background-image section-block s-12" style="background-image:url(img/product-04.jpg)">
+                <a href="" class="background-image section-block s-12" style="background-image:url(img/product-04.jpg)">
                   <h3 class="text-strong text-white">Knowledge Enhancement</h3> 
                   <p class="text-white">To continually improve our aviation knowledge base, in order to provide accurate operational information to all customers.</p> 
                 </a>
@@ -116,7 +116,7 @@
             </div>
             <div class="s-12 m-4 margin-bottom">
               <div class="hover-zoom">
-                <a href="sample-page.html" class="background-image section-block s-12" style="background-image:url(img/product-01.jpg)">
+                <a href="" class="background-image section-block s-12" style="background-image:url(img/product-01.jpg)">
                   <h3 class="text-strong text-white">Professionalism</h3> 
                   <p class="text-white">To provide professional services appropriately to our customers.</p> 
                 </a>
@@ -143,7 +143,7 @@
                     <p>Self-motivated, innovative and forward thinking person.</p>
                   </div> 
                 </div>  
-                <img src="img/img-01.jpg"/>
+                <img src="img/hastings.png"/>
               </div>                                                                                                                                                                                                              
               <div class="margin-top">                                                                                                                                         
                 <h4 class="text-strong margin-bottom-10">Hastings Laison Jailosi</h4>                        
@@ -160,7 +160,7 @@
                     <p>Her commitment as a Malawian Sales and Marketing plus Business Development professional has shaped her experiences in the profession.</p>
                   </div> 
                 </div>  
-                <img src="img/img-01.jpg"/>
+                <img src="img/selina.png"/>
               </div>                                                                                                                                                                                                              
               <div class="margin-top">                                                                                                                                         
                 <h4 class="text-strong margin-bottom-10">Sellina Mhango</h4>                        
